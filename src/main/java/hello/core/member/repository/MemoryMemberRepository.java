@@ -1,9 +1,11 @@
 package hello.core.member.repository;
 
 import hello.core.member.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.security.PrivateKey;
 import java.util.*;
+
 
 public class MemoryMemberRepository implements MemberRepository {
 

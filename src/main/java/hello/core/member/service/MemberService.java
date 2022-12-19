@@ -3,7 +3,10 @@ package hello.core.member.service;
 import hello.core.member.domain.Member;
 import hello.core.member.repository.MemberRepository;
 import hello.core.member.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,9 +14,12 @@ import java.util.Optional;
 // 실제 비즈니스 로직을 구현
 // 로직들을 조합해주는 서비스
 //
+
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
+
 
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
